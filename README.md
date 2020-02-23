@@ -1,6 +1,11 @@
 # wordpress-tc
 
 ## Project setup
+
+##install vue cli
+```npm install -g @vue/cli```
+
+##install dependencies
 ```
 npm install
 ```
@@ -15,15 +20,10 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
-
 ### Lints and fixes files
 ```
 npm run lint
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Used vue.js to build the app using axios, date-fns and bootstap grid external libraries
