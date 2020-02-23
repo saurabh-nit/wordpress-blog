@@ -27,3 +27,6 @@ npm run lint
 
 ### Customize configuration
 Used vue.js to build the app using axios, date-fns and bootstap grid external libraries
+
+### Deployed App Link
+https://wordpress-tc.herokuapp.com/
