@@ -28,8 +28,8 @@
   animation-duration: 1500ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   display: inline-block;
 }
 

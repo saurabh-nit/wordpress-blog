@@ -44,13 +44,18 @@ export default {
     }
   },
   actions: {
-    GET_BLOGS({ commit, dispatch }, { params, pathVariables } = {}) {
+    GET_BLOGS(
+      { commit, dispatch },
+      { params, pathVariables, success, fail } = {}
+    ) {
       api.getAllBlogs(
         response => {
           commit("setBlogs", response.data);
+          success();
         },
         error => {
           errorHandler.handleErrors(dispatch, error);
+          fail();
         },
         pathVariables,
         params
@@ -87,20 +92,26 @@ export default {
           commit("setRelatedPosts", response.data);
         },
         error => {
+          commit("setRelatedPosts", error.response.data);
           errorHandler.handleErrors(dispatch, error);
         },
         pathVariables,
         params
       );
     },
-    GET_BLOG_BY_ID({ commit, dispatch }, { params, pathVariables } = {}) {
+    GET_BLOG_BY_ID(
+      { commit, dispatch },
+      { params, pathVariables, success, fail } = {}
+    ) {
       api.getBlogById(
         response => {
           console.log("GET_BLOG_BY_ID:", response);
           commit("setBlogDetail", response.data);
+          success();
         },
         error => {
           errorHandler.handleErrors(dispatch, error);
+          fail();
         },
         pathVariables,
         params
